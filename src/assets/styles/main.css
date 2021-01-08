@@ -1,13 +1,5 @@
 @tailwind base;
 
-a {
-  @apply text-blue-700;
-}
-
-a:hover {
-  @apply underline;
-}
-
 @tailwind components;
 
 @tailwind utilities;
@@ -83,4 +75,40 @@ a:hover {
 
 .content th {
   @apply bg-gray-100;
+}
+
+.hero-img{
+  height: 480px;
+}
+
+.hid{
+  overflow: hidden;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.post-img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }

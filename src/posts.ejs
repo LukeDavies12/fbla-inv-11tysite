@@ -1,0 +1,39 @@
+---
+pagination:
+  data: collections.posts
+  size: 5
+  alias: list
+  reverse: true
+permalink: '<% if (pagination.pageNumber > 0) { %><%= `posts${pagination.pageNumber + 1}/index.html` %><% } else { %>posts/index.html<% } %>'
+eleventyComputed:
+  title: '<% if (pagination.pageNumber > 0) { %><%= `Posts Page ${pagination.pageNumber + 1} | ${site.title}` %><% } else { %>Recent Posts<% } %>'
+---
+<div class="prose mb-20">
+  <h1>Posts</h1>
+</div>
+<ul>
+    <% list.forEach((post) => { %>
+    <li class="mb-3 flex justify-between">
+      <div class="post w-1/2 md:w-full sm:w-full mx-auto">
+        <div class="my-10">
+          <img src="<%= post.data.image %>" alt="" class="post-img rounded-3xl">
+          <div class="img-bg mb-6"></div>
+          <a href="<%= post.url %>" class=" text-gray-900 font-semibold text-2xl"><%= post.data.title %></a>
+          <div><%= this.dateFns.format(new Date(post.data.date), 'LLLL d, yyyy') %></div>
+        </div>
+      </div>
+    </li>
+    <% }) %>
+  </ul>
+
+  <div class="text-sm flex justify-between">
+    <% if (pagination.previous) { %>
+    <div>
+      <a href="<%= pagination.previous.replace(/index.html$/, "") %>">← Newer Posts</a>
+    </div>
+    <% } %> <% if (pagination.next) { %>
+    <div class="text-right ml-auto border-gray-300">
+      <a href="<%= pagination.next.replace(/index.html$/, "") %>">Older Posts →</a>
+    </div>
+    <% } %>
+  </div>

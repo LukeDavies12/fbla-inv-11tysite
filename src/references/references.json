@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/references.ejs",
+  "permalink": "{{ page.fileSlug }}/index.html",
+  "tags": "references"
+}

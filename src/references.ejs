@@ -1,0 +1,14 @@
+---
+permalink: references/index.html
+title: References
+---
+<div class="prose">
+  <h1>Investement References</h1>
+</div>
+<ul>
+    <% for(var i=0; i < collections.refsAlpha.length; i++){ %>
+    <li class="mb-3 flex justify-between">
+      <a href="<%= collections.refsAlpha[i].url %>"><%= collections.refsAlpha[i].data.title %></a>
+    </li>
+    <% } %>
+  </ul>

@@ -6,6 +6,16 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
+  eleventyConfig.addCollection('refsAlpha', function (collection) {
+    return collection.getFilteredByGlob('src/references/*.md').sort(function (a, b) {
+      let nameA = a.data.title.toUpperCase();
+      let nameB = b.data.title.toUpperCase();
+      if (nameA < nameB) return -1;
+      else if (nameA > nameB) return 1;
+      else return 0;
+    });
+  });
+
   eleventyConfig.addPlugin(lazyImagesPlugin, {
     transformImgPath: (imgPath) => {
       if (imgPath.startsWith('http://') || imgPath.startsWith('https://')) {
@@ -16,6 +26,8 @@ module.exports = function (eleventyConfig) {
       }
     },
   });
+
+  eleventyConfig.addPassthroughCopy('./src/js');
 
   eleventyConfig.setEjsOptions({
     rmWhitespace: true,

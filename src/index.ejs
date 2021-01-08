@@ -1,32 +1,36 @@
 ---
-pagination:
-  data: collections.posts
-  size: 5
-  alias: list
-  reverse: true
-permalink: '<% if (pagination.pageNumber > 0) { %><%= `page${pagination.pageNumber + 1}/index.html` %><% } else { %>index.html<% } %>'
-eleventyComputed:
-  title: '<% if (pagination.pageNumber > 0) { %><%= `Page ${pagination.pageNumber + 1} | ${site.title}` %><% } else { %><%= site.title %><% } %>'
+title: asdf
 ---
-
-<ul>
-  <% list.forEach((post) => { %>
-  <li class="mb-3 flex justify-between">
-    <a href="<%= post.url %>"><%= post.data.title %></a>
-
-    <div><%= this.dateFns.format(new Date(post.data.date), 'LLLL d, yyyy') %></div>
-  </li>
-  <% }) %>
-</ul>
-
-<div class="text-sm flex justify-between">
-  <% if (pagination.previous) { %>
-  <div>
-    <a href="<%= pagination.previous.replace(/index.html$/, "") %>">← Newer Posts</a>
+<div class="container">
+  <div class="hero-sec flex w-full mt-16 sm:flex-col sm:mt-0">
+    <div class="left w-1/2 sm:w-full">
+      <h1 class=" font-extrabold text-5xl text-gray-900 mt-12">Investment Tips from Teachers, Students, and People in the Industry</h1>
+      <div class="buttons mt-12">
+        <a href="/posts/"><button class="primary-btn px-12 py-3 bg-primary border-2 border-primary rounded-md text-white text-base font-semibold">Posts</button></a>
+        <a href="/about/"><button class="ghost-btn px-12 py-3 bg-transparent border-2 border-primary rounded-md text-base text-primary font-semibold">About</button></a>
+      </div>
+    </div> 
+    <div class="right w-1/2 flex justify-end sm:w-full sm:mt-32">
+    <img src="./assets/images/fiheroimg.png" alt="alt" class="hero-img sm:hero-img-small">
+    </div>
   </div>
-  <% } %> <% if (pagination.next) { %>
-  <div class="text-right ml-auto">
-    <a href="<%= pagination.next.replace(/index.html$/, "") %>">Older Posts →</a>
+
+  <div class="container mx-auto">
+    <svg width="41" height="270" viewBox="0 0 41 270" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-auto mt-20">
+      <g filter="url(#filter0_d)">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M28.1653 217.492C28.2085 217.495 28.2517 217.497 28.295 217.499V204.461H28.1653V217.492ZM23.4617 220.707C23.1576 227.843 21.9817 234.801 21.5653 241.914C22.8649 234.324 23.8189 223.48 23.4617 220.707ZM20.2402 241.329C20.3963 236.471 21.1838 231.75 21.5852 226.943C22.438 216.727 21.9986 206.526 21.6894 196.292C21.2569 181.973 17.9624 168.715 15.4955 155.152C13.1299 142.148 11.6997 129.007 12.0535 115.466C12.2265 108.862 13.2077 102.558 14.7681 96.4396C16.4457 89.8614 18.2266 83.3433 20.2398 76.9878C22.7801 68.9689 23.8094 60.4237 24.084 51.6531C24.3098 44.4504 24.318 37.2234 23.9564 30.024C23.6745 24.4189 22.5051 19.1749 20.8435 14.1614C19.7476 10.8556 19.0007 7.35143 18.5752 3.69312C18.4766 2.84788 18.4831 2.02833 18.6271 1.21669C18.7555 0.495303 18.7663 -0.735334 19.5396 0.582265C19.6672 0.79901 19.8159 0.426788 19.9457 0.417565C20.629 0.373425 21.0935 0.857643 21.1108 1.93346C21.1704 5.69191 22.1958 9.00172 23.2411 12.2555C24.51 16.205 25.9964 20.0089 26.851 24.2299C27.7155 28.4982 28.5255 32.7758 28.4784 37.3558C28.4459 40.4884 28.6903 43.6427 28.9476 46.7608C29.1111 48.7418 28.8464 50.6866 28.7737 52.605C28.7249 53.8857 29.06 54.9774 28.9896 56.1836C28.8996 57.7232 28.8957 59.2747 28.8438 60.8196C28.6989 65.1143 28.1211 69.2977 27.5287 73.4909C26.473 80.9584 23.8916 87.5339 22.3104 94.6957C21.1233 100.073 19.6693 105.338 18.8567 110.869C18.3823 114.098 18.3576 117.524 18.3542 120.863C18.3403 135.022 20.3829 148.641 23.2217 162.027C24.1727 166.511 25.1241 171.012 25.9077 175.55C26.5413 179.217 27.1109 182.956 27.4711 186.782C27.9166 191.511 28.33 196.238 28.5121 200.99C28.9887 213.41 28.6717 225.753 26.4535 237.836C26.3164 238.585 26.079 239.306 26.0111 240.066C25.7162 243.363 24.0883 244.7 22.3731 245.907C21.7106 246.374 20.2921 244.986 20.2454 243.842C20.2112 243.007 20.2385 242.167 20.2402 241.329Z" fill="#9D1C20"/>
+      </g>
+      <defs>
+      <filter id="filter0_d" x="0" y="0" width="41" height="270" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset dy="12"/>
+      <feGaussianBlur stdDeviation="6"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.615686 0 0 0 0 0.109804 0 0 0 0 0.12549 0 0 0 0.35 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+      </filter>
+      </defs>
+      </svg>      
   </div>
-  <% } %>
 </div>
