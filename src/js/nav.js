@@ -32,3 +32,4 @@ document.addEventListener(
   },
   false
 );
+//git commit -m "Your message about the commit" --no-verify

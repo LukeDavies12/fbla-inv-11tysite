@@ -2,7 +2,7 @@
 title: 'Mr. Kastel Interview - Investment Resources and Strategies for Beginners'
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 date: 2021-01-07T00:00:00Z
-image: ../assets/images/posts/kastelpostimg.jpeg
+imgUrl: ../assets/images/posts/kastelpostimg.jpeg
 ---
 1
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.

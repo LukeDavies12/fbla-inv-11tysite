@@ -14,14 +14,16 @@ eleventyComputed:
 <ul>
     <% list.forEach((post) => { %>
     <li class="mb-3 flex justify-between">
-      <div class="post w-1/2 md:w-full sm:w-full mx-auto">
-        <div class="my-10">
-          <img src="<%= post.data.image %>" alt="" class="post-img rounded-3xl">
-          <div class="img-bg mb-6"></div>
-          <a href="<%= post.url %>" class=" text-gray-900 font-semibold text-2xl"><%= post.data.title %></a>
-          <div><%= this.dateFns.format(new Date(post.data.date), 'LLLL d, yyyy') %></div>
+      <a href="<%= post.url %>">
+        <div class="post w-1/2 md:w-full sm:w-full mx-auto">
+          <div class="my-10">
+            <img src="<%= post.data.imgUrl %>" alt="" class="post-img rounded-3xl">
+            <div class="img-bg mb-6"></div>
+            <a href="<%= post.url %>" class=" text-gray-900 font-semibold text-2xl"><%= post.data.title %></a>
+            <div><%= this.dateFns.format(new Date(post.data.date), 'LLLL d, yyyy') %></div>
+          </div>
         </div>
-      </div>
+      </a>
     </li>
     <% }) %>
   </ul>

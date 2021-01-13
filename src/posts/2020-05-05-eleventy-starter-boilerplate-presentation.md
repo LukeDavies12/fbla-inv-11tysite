@@ -2,6 +2,7 @@
 title: 'Eleventy Starter Boilerplate Presentation'
 description: Everything you need to use this Eleventy Boilerplate template
 date: 2020-05-05T00:00:00Z
+imgUrl: ../assets/images/posts/kastelpostimg.jpeg
 ---
 
 [![Eleventy starter boilerplate banner](/assets/images/posts/eleventy-js-starter-boilerplate.png)](https://creativedesignsguru.com/demo/Eleventy-Starter-Boilerplate/)

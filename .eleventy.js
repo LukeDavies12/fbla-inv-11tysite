@@ -16,6 +16,10 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addCollection('postsRev', function (collection) {
+    return collection.getFilteredByGlob('src/posts/*.md').reverse();
+  });
+
   eleventyConfig.addPlugin(lazyImagesPlugin, {
     transformImgPath: (imgPath) => {
       if (imgPath.startsWith('http://') || imgPath.startsWith('https://')) {

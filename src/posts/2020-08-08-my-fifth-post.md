@@ -2,6 +2,7 @@
 title: 'My fifth post'
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 date: 2020-08-08T00:00:00Z
+imgUrl: ../assets/images/posts/kastelpostimg.jpeg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
