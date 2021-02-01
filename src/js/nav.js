@@ -32,4 +32,6 @@ document.addEventListener(
   },
   false
 );
+//to bypass using --no-verify
 //git commit -m "Your message about the commit" --no-verify
+//git push
