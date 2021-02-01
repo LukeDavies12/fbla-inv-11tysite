@@ -2,7 +2,7 @@
 title: 'A Collection of Articles About the Gamestop Short Squeeze (02/01)'
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 date: 2021-02-01T00:00:00Z
-imgUrl: ../assets/images/posts/gamestoppostimg.jpeg
+imgUrl: ../assets/images/posts/gamestoppostimg.jpg
 ---
 Here is a collecion of recent articles (as of 02/01) to read to gain an understanding of what happened with Gamestop recently.
 
