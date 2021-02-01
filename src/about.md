@@ -1,5 +1,5 @@
 ---
-title: About
+title: About - Foxes Invest
 eleventyExcludeFromCollections: true
 ---
 <div class="prose">

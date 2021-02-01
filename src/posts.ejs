@@ -6,7 +6,7 @@ pagination:
   reverse: true
 permalink: '<% if (pagination.pageNumber > 0) { %><%= `posts${pagination.pageNumber + 1}/index.html` %><% } else { %>posts/index.html<% } %>'
 eleventyComputed:
-  title: '<% if (pagination.pageNumber > 0) { %><%= `Posts Page ${pagination.pageNumber + 1} | ${site.title}` %><% } else { %>Recent Posts<% } %>'
+  title: '<% if (pagination.pageNumber > 0) { %><%= `Posts Page ${pagination.pageNumber + 1} | ${site.title} - Foxes Invest` %><% } else { %>Recent Posts - Foxes Invest<% } %>'
 ---
 <div class="prose mb-20">
   <h1>Posts</h1>
